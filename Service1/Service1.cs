@@ -69,12 +69,12 @@ namespace Service1
             InitializeComponent();
 
             // Custom Event Log
-            if(!EventLog.SourceExists( "Zinon Logs" ))
+            if(!EventLog.SourceExists( "<Service_Name> Logs" ))
             {
-                EventLog.CreateEventSource( "Zinon Logs", "Zinon Monitoring" );
+                EventLog.CreateEventSource( "<Service_Name> Logs", "<Service_Name> Monitoring" );
             }
-            eventLog1.Source = "Zinon Logs";
-            eventLog1.Log = "Zinon Monitoring";
+            eventLog1.Source = "<Service_Name> Logs";
+            eventLog1.Log = "<Service_Name> Monitoring";
         }
 
 
